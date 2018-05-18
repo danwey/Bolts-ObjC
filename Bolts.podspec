@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Tasks' do |ss|
     ss.ios.source_files = 'Bolts/Common/*.[hm]'
-    ss.ios.public_header_files = 'Bolts/Common/*.h'
 
     ss.osx.source_files = 'Bolts/Common/*.[hm]'
     ss.osx.public_header_files = 'Bolts/Common/*.h'
@@ -38,7 +37,6 @@ Pod::Spec.new do |s|
     ss.dependency 'Bolts/Tasks'
 
     ss.ios.source_files = 'Bolts/iOS/**/*.[hm]'
-    ss.ios.public_header_files = 'Bolts/iOS/*.h'
     ss.osx.source_files = ''
     ss.watchos.source_files = ''
     ss.tvos.source_files = ''
