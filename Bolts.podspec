@@ -12,33 +12,17 @@ Pod::Spec.new do |s|
   s.license      = 'BSD'
   s.source       = { :git => 'https://github.com/BoltsFramework/Bolts-ObjC.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ParseIt'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.8'
-  s.watchos.deployment_target = '2.0'
-  s.tvos.deployment_target = '9.0'
-
   s.subspec 'Tasks' do |ss|
-    ss.ios.source_files = 'Bolts/Common/*.[hm]'
-
-    ss.osx.source_files = 'Bolts/Common/*.[hm]'
-    ss.osx.public_header_files = 'Bolts/Common/*.h'
-
-    ss.watchos.source_files = 'Bolts/Common/*.[hm]'
-    ss.watchos.public_header_files = 'Bolts/Common/*.h'
-
-    ss.tvos.source_files = 'Bolts/Common/*.[hm]'
-    ss.tvos.public_header_files = 'Bolts/Common/*.h'
+    ss.source_files = 'Bolts/Common/*.{h,m}'
   end
 
   s.subspec 'AppLinks' do |ss|
-    ss.ios.deployment_target = '8.0'
+    ss.deployment_target = '8.0'
     ss.dependency 'Bolts/Tasks'
 
-    ss.ios.source_files = 'Bolts/iOS/**/*.[hm]'
-    ss.osx.source_files = ''
-    ss.watchos.source_files = ''
-    ss.tvos.source_files = ''
+    ss.source_files = 'Bolts/iOS/**/*.{h,m}'
   end
 end
